@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lights OS</title>
+   <link rel="shortcut icon" href="files/Light_os.png" type="image/png">
+  <script>
+  function girbee() {
+   var sifre=document.getElementById('sfr').value;
+   if (sifre == "user05") {
+   document.getElementById('otrmn').style = "display: none;"
+   document.getElementById('singin').style = "display: none;"
+   document.getElementById('islet').style = "display: block;"
+   }
+   else {
+      alert('Yanlış.')
+   }
+}</script>
+  <style>
+  #baslik {
+    box-shadow: 5px 5px 5px gray;
+    width: 100%;
+}
+#menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    font-size: 16px;
+}
+#alt {
+    background-color: rgb(64, 87, 179);
+    color: white;
+    width: 100%;
+    height: 100px;
+    display: inline-block;
+}
+#bo {
+    vertical-align: text-bottom;
+}
+#otrmn {
+    display: none;
+    border: solid 5px;
+    background-image: url('files/gor.jpg');
+    height: 500px;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-image: url('files/gor.jpg');
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#singin {
+    z-index: 1;
+}
+#sfr {
+    top: 50px;
+    background-color: rgba(255, 255, 255, 0.714);
+}
+#kptb {
+    border-radius: 100%;
+    background-color: red;
+    border-color: red;
+    color: white;
+    float: right;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+}
+#ort {
+    float: left;
+}
+#gr {
+    border-radius: 10px;
+    background-color: green;
+    border-color: green;
+    color: white;
+}
+.mn {
+    border: solid;
+    border-color: black;
+    display: none;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+}
+.mnlr {
+    border: solid 2px;
+    border-color: dodgerblue;
+    color: dodgerblue;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.mnlr:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+.mnkpt {
+    font-size: 25px;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 183, 0, 0.688);
+    border-radius: 30px;
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(228, 176, 44);
+}
+.osb {
+    border: solid 2px;
+    border-color: dodgerblue;
+    color: dodgerblue;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    padding: 15px 30px;
+    vertical-align: top;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.osb:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+#islet {
+    display: none;
+}
+form{text-align:Center;border:solid rgb(92, 94, 95);width:400px;height:550px;position:relative;top:50px;background:rgb(92,94,95);}
+.inp{margin-top:20px;height:40px;width:300px;border-radius:6px;font-size:20px;}
+.btn{border:solid black;border-radius:6px;padding:20px;background:black;gap:10px;color:white;transition:0.26s;}
+.btn:hover{background:orange;border-color:orange;cursor:pointer;}
+        #u1{position:relative;top:30px;}
+        #u2{position:relative;top:90px;}
+        #u3{position:relative;top:150px;}
+#u4{position:relative;top:210px;}
+#u5{position:relative;top:270px;}#u6{position:relative;top:330px;}
+body{margin: 0;padding:0;box-sizing:border-box;}
+  </style>
+</head>
+<body>
+<div id="baslik">
+<button id="menu" onclick="document.getElementById('mn').style = 'display: block;'">
+<img width="50px" height="50px" src="files/Light_os.png">
+</button>
+<a id="islet" class="osb">Light OS</a>
+<button id="singin" class="osb" onclick="document.getElementById('otrmn').style = 'display: inline-block;'">Oturum Aç</button>
+</div><br>
+<!--tanıtım-->
+<center><img height="auto" src="files/Light_os.png"></center>
+<!--/tanıtım-->
+<!--mnlrnsnlr-->
+<center>
+<div style="display:none;" id="hsp">
+<form name="hesap">
+<span style="font-size:15px;color:white;float:left;">Hesap Makinesi</span>
+<button onclick="document.getElementById('hsp').style.display = 'none'" id="hspmkpt" style="background-color: red;color:white;border-radius: 100%;float: right;">&times;</button><br>
+<input name="cikti" class="inp" readonly type="text"><br>
+<span class="btn" id="u1" onclick="hesap.cikti.value = ''" style="background:red;border-color:ReD;">C</span>
+<span class="btn" id="u1" onclick="hesap.cikti.value += '+'">+</span>
+<span class="btn" id="u1" onclick="hesap.cikti.value += '-'">-</span>
+<span class="btn" id="u1" onclick="hesap.cikti.value += '*'">x</span><br>
+<span class="btn" id="u2" onclick="hesap.cikti.value += '/'">/</span>
+<span class="btn" id="u2" onclick="hesap.cikti.value += '**'">x<sup>y</sup></span>
+<span class="btn"  id="u2"onclick="hesap.cikti.value += '1'">1</span>
+<span class="btn"  id="u2"onclick="hesap.cikti.value += '2'">2</span><br>
+<span class="btn"  id="u3"onclick="hesap.cikti.value += '3'">3</span>
+<span class="btn"  id="u3"onclick="hesap.cikti.value += '4'">4</span>
+<span class="btn"  id="u3"onclick="hesap.cikti.value += '5'">5</span>
+<span class="btn"  id="u3"onclick="hesap.cikti.value += '6'">6</span><br>
+<span class="btn"  id="u4"onclick="hesap.cikti.value += '7'">7</span>
+<span class="btn"  id="u4"onclick="hesap.cikti.value += '8'">8</span>
+<span class="btn"  id="u4"onclick="hesap.cikti.value += '9'">9</span>
+<span class="btn"  id="u4" onclick="hesap.cikti.value += '0'">0</span><br>
+<span class="btn"  id="u5" onclick="document.hesap.cikti.value = eval(hesap.cikti.value)">=</span>
+<span class="btn"  id="u5" onclick="hesap.cikti.value += '**(1/2)'">&radic;</span>
+<span class="btn"  id="u5" onclick="hesap.cikti.value += '3,1415926535897932384626433832795 ' ">&pi;</span>
+<span class="btn"  id="u5" onclick="hesap.cikti.value += '.'">,</span><br>
+<span class="btn"  id="u6" onclick="hesap.cikti.value = Math.tan(hesap.cikti.value);"><em>tan</em></span>
+<span class="btn"  id="u6" onclick="hesap.cikti.value = Math.sin(hesap.cikti.value);"><em>sin</em></span>
+<span class="btn"  id="u6" onclick="hesap.cikti.value = Math.cos(hesap.cikti.value);"><em>cos</em></span>
+<span class="btn"  id="u6" onclick="hesap.cikti.value = Math.abs(hesap.cikti.value);"><em>|x|</em></span>
+</form>
+</div></center>
+<br><br><br><br><br><br>
+<center>
+<div class="mn" id="hkmzd">
+<a class="mnkpt" onclick="document.getElementById('hkmzd').style = 'display: none;'">Kapat &times;</a>
+<hr>
+<br>
+<a class="mnlr" onclick="document.getElementById('welogo').style = 'display: block;'">Logomuz</a>
+<br>
+<br>
+<br>
+<a class="mnlr" onclick="document.getElementById('mail').style = 'display: block;'">İletişim</a>
+</div>
+</center>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////-->
+<center>
+<div id="proje" class="mn">
+<a class="mnkpt" onclick="document.getElementById('proje').style = 'display: none;'">Kapat &times;</a>
+<hr>
+<br>
+<a class="mnlr" onclick="document.getElementById('hsp').style='display:block;position:relative;bottom:500px;z-index:10;';document.getElementById('proje').style = 'display: none;'">Hesap Makinesi</a>
+<br>
+<br>
+<br>
+<a class="mnlr">LightSpeed</a>
+</div>
+</center>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////-->
+<center>
+<div id="isklnc" class="mn">
+<a class="mnkpt" onclick="document.getElementById('isklnc').style = 'display: none;'">Kapat &times;</a>
+<hr>
+<br>
+<a class="mnlr"></a>
+<a class="mnlr"></a>
+</div>
+</center>
+<center>
+   <div></div>
+</center>
+<!--/mnlrnsnlr-->
+<center>
+<div id="mn" class="mn">
+<a class="mnkpt" onclick="document.getElementById('mn').style = 'display: none;'">Kapat &times;</a>
+<hr>
+<br>
+<a class="mnlr" onclick="document.getElementById('hkmzd').style = 'display: block;';document.getElementById('mn').style = 'display: none;'">Hakkımızda</a>
+<br>
+<br>
+<br>
+<a class="mnlr" onclick="document.getElementById('proje').style = 'display: block;';document.getElementById('mn').style = 'display: none;'">Uygulamalar</a>
+<br>
+<br>
+<br>
+<a class="mnlr" onclick="document.getElementById('isklnc').style = 'display: block;';document.getElementById('mn').style = 'display: none;'">Light OS</a>
+</div>
+</center>
+<center>
+<div id="otrmn">
+<div id="kpt">
+<span id="ort">Oturum Aç</span>
+<button id="kptb" onclick="document.getElementById('otrmn').style = 'display: none;'">&times;</button><br>
+</div><br><br><br><br><br><br><br><br><br><br><br>
+<input type="password" id="sfr">
+<button id="gr" onclick="girbee()">Gir</button><br><br>
+</div>
+<!--bitis-->
+<br>
+<div id="alt">
+<center>
+<h1 id="bo">&copy; Light OS</h1>
+</center>
+</div>
+</center>
+</body>
+</html>
